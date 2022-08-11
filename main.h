@@ -19,7 +19,6 @@
 /* Points to an array of pointers to strings called the "environment" */
 extern char **environ;
 
-
 /**
  * struct data - struct that contains all relevant data on runtime
  * @av: argument vector
@@ -132,7 +131,7 @@ void print_syntax_error(data_shell *datash, char *input, int i, int bool);
 int check_syntax_error(data_shell *datash, char *input);
 
 /* shell_loop.c */
-ar *without_comment(char *in);
+char *without_comment(char *in);
 void shell_loop(data_shell *datash);
 
 /* read_line.c */
@@ -208,7 +207,6 @@ char *error_syntax(char **args);
 char *error_permission(char **args);
 char *error_path_126(data_shell *datash);
 
-
 /* get_error.c */
 int get_error(data_shell *datash, int eval);
 
@@ -231,4 +229,3 @@ void aux_help_cd(void);
 int get_help(data_shell *datash);
 
 #endif
-
